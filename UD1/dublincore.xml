@@ -1,0 +1,12 @@
+<catalogo xmlns:dc="http://purl.org/dc/elements/1.1">
+    <libro>
+        <dc:titulo>Diario de Greg</dc:titulo>
+        <dc:creator>Pepe Perez</dc:creator>
+        <fecha>1995</fecha>
+    </libro>
+    <libro>
+        <dc:titulo>Pokemon</dc:titulo>
+        <dc:creator>Poki Pokez</dc:creator>
+        <fecha>2001</fecha>
+    </libro>
+</catalogo>

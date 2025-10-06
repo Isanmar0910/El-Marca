@@ -1,0 +1,6 @@
+<empleado xmlns:trab="http://empresa.com/trabajo"
+          xmlns:pers="http://empresa.com/personal">
+    <nombre>Lucía Rodrigez</nombre>
+    <trab:email>Lucia@miempresa.com</trab:email>
+    <pers:email>ñucia@gmail.com</pers:email>
+</empleado>
