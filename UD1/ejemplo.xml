@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE banco SYSTEM "banco2.dtd">
+<banco>
+<sucursal codigo="8">
+    <nombre>Madrid</nombre>
+    <cuenta IBAN="456516145">
+        <tipo>Corriente</tipo>
+        <saldo>1025</saldo>
+        <cliente>
+            <nombre>Peca Pequita</nombre>
+            <dni>12345678A</dni>
+        </cliente>
+        <cliente>
+            <nombre>Hueso Bone</nombre>
+            <dni>87456321F</dni>
+        </cliente>
+    </cuenta>
+</sucursal>
+
+<sucursal codigo="4">
+    <nombre>Banco Malaga</nombre>
+    <cuenta IBAN="4812263">
+        <tipo>Corriente</tipo>
+        <saldo>8542</saldo>
+        <cliente>
+            <nombre>MAmi</nombre>
+            <dni>48598489G</dni>
+        </cliente>
+        <cliente>
+            <nombre>Jose josez</nombre>
+            <dni>48954164A</dni>
+        </cliente>
+    </cuenta>
+</sucursal>
+</banco>

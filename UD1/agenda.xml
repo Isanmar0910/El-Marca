@@ -1,0 +1,12 @@
+<agenda xmlns:ubicacion="http://ubicacion.org">
+    <contactos>
+        <Nombre>Peca Doblas</Nombre>
+        <Telefono>+34 624514523</Telefono>
+        <ubicacion:Direccion>Calle Cortijo Jurao</ubicacion:Direccion>
+    </contactos>
+    <contactos>
+        <Nombre>Hueso Rojas</Nombre>
+        <Telefono>+34 625415362</Telefono>
+        <ubicacion:Direccion>Calle Peru</ubicacion:Direccion>
+    </contactos>
+</agenda>
