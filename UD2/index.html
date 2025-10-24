@@ -10,12 +10,74 @@
 <body>
     <header class="cabecera">
         <h1 cñass="titulo">GameZone</h1>
+        <nav class="navegacion">
+            <u1 class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Guias</a></li>
+                <li><a href="#">Contactos</a></li>
+            </u1>
+        </nav>
     </header>
     <main id="Contenido-principal">
         <section class="intro tarjeta">
             <h2>Bienvenidos a mi GameZone</h2>
             <p>Portal de ejemplo para practicar HTML y CSS.</p>
             <p class="aviso" >Hoy: estructura semantica y box model sobre esta tarjeta.</p>
+        </section>
+
+        <!-- Seccion que contendra listas y tablas -->
+
+        <section class="listas-y-tabla tarjeta">
+            <h2>Guía Rápida</h2>
+            <div class="listas">
+                <div>
+                    <h3>Caracteristicas</h3>
+                    <ul class="lista">
+                        <li>Anañisis semanales</li>
+                        <li>Guia Paso a paso</li>
+                        <li>Comunidad Activa</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Primeros pasos</h3>
+                    <ol class="lista">
+                        <li>Elige tu genero favorito</li>
+                        <li>Explora la galeria</li>
+                        <li>LEe las guais</li>
+                        <li>Comparte tu opinion</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- La tabla -->
+            <h3>Top Ventas</h3>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Juego</th>
+                        <th>Plataforma</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Racing Challenge</td>
+                        <td>PC</td>
+                        <td>120.00€</td>
+                    </tr>
+                    <tr>
+                        <td>Magic Realms</td>
+                        <td>PS</td>
+                        <td>95.90€</td>
+                    </tr>
+                    <tr>
+                        <td>City Builder</td>
+                        <td>Switch</td>
+                        <td>81.20€</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <footer class="pie">
