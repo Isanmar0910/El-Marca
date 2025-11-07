@@ -1,88 +1,134 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="descripcion" content="portal de videojuegos">
+    <meta name="description" content="Portal de videojuegos">
     <link rel="stylesheet" href="estilos.css">
-    <title>GameZone -Tu portal de videojuegos</title>
+    <title>GameZone - Tu portal de videojuegos</title>
 </head>
 <body>
     <header class="cabecera">
-        <h1 cñass="titulo">GameZone</h1>
+        <div class="brand">
+            <img src="imagenes/gamezone-logo.png" alt="Logo de GameZone" class="logo">
+        </div>
+        <h1 class="titulo"></h1>
         <nav class="navegacion">
-            <u1 class="menu">
+            <ul class="menu">
                 <li><a href="#">Inicio</a></li>
+                <li><a href="pages\registro.html">registro</a></li>
                 <li><a href="#">Noticias</a></li>
-                <li><a href="#">Guias</a></li>
-                <li><a href="#">Contactos</a></li>
-            </u1>
+                <li><a href="#">Guías</a></li>
+                <li><a href="pages\contacto.html">Contactos</a></li>
+            </ul>
         </nav>
     </header>
-    <main id="Contenido-principal">
+    <main id="contenido-principal">
         <section class="intro tarjeta">
-            <h2>Bienvenidos a mi GameZone</h2>
+            <h2>Bienvenidos a GameZone</h2>
             <p>Portal de ejemplo para practicar HTML y CSS.</p>
-            <p class="aviso" >Hoy: estructura semantica y box model sobre esta tarjeta.</p>
+            <p class="aviso">Hoy: estructura semántica y box model sobre esta tarjeta.</p>
         </section>
 
-        <!-- Seccion que contendra listas y tablas -->
+    <!-- Sección que contendrá listas y tablas -->
 
-        <section class="listas-y-tabla tarjeta">
-            <h2>Guía Rápida</h2>
-            <div class="listas">
-                <div>
-                    <h3>Caracteristicas</h3>
-                    <ul class="lista">
-                        <li>Anañisis semanales</li>
-                        <li>Guia Paso a paso</li>
-                        <li>Comunidad Activa</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Primeros pasos</h3>
-                    <ol class="lista">
-                        <li>Elige tu genero favorito</li>
-                        <li>Explora la galeria</li>
-                        <li>LEe las guais</li>
-                        <li>Comparte tu opinion</li>
-                    </ol>
-                </div>
+    <section class="listas-y-tabla tarjeta">
+        <h2>Guía rápida</h2>
+        <div class="listas">
+            <div>
+                <h3>Características</h3>
+                <ul class="lista">
+                    <li>Análisis semanales</li>
+                    <li>Guías paso a paso</li>
+                    <li>Comunidad activa</li>
+                </ul>
             </div>
+            <div>
+                <h3>Primeros pasos</h3>
+                <ol class="lista">
+                    <li>Elige tu género favorito</li>
+                    <li>Explora la galería</li>
+                    <li>Lee las guías</li>
+                    <li>Comparte tu opinión</li>
+                </ol>
+            </div>
+        </div>
 
-            <!-- La tabla -->
-            <h3>Top Ventas</h3>
-            <table class="tabla">
-                <thead>
-                    <tr>
-                        <th>Juego</th>
-                        <th>Plataforma</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Racing Challenge</td>
-                        <td>PC</td>
-                        <td>120.00€</td>
-                    </tr>
-                    <tr>
-                        <td>Magic Realms</td>
-                        <td>PS</td>
-                        <td>95.90€</td>
-                    </tr>
-                    <tr>
-                        <td>City Builder</td>
-                        <td>Switch</td>
-                        <td>81.20€</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <!-- La tabla -->
+        <h3>Top Ventas</h3>
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Juego</th>
+                    <th>Plataforma</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Racing Challenge</td>
+                    <td>PC</td>
+                    <td>120.00€</td>
+                </tr>
+                <tr>
+                    <td>Magic Realms</td>
+                    <td>PS</td>
+                    <td>95.90€</td>
+                </tr>
+                <tr>
+                    <td>City Builder</td>
+                    <td>Switch</td>
+                    <td>81.20€</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tarjeta">
+        <!-- action indica la pagina que recibira los datos -->
+        <!-- method=get envia la info en la URL sin cifrar -->
+        <!-- name sirve para identificar simplementea al formilario -->
+        <form name="buscar" action="buscar.html" method="get"> 
+            <!-- label conecta visual y funcionalmente con el campo (a traves de for <-> id) -->
+            <label for="search">Buscar juego:</label>
+
+            <!-- id se identifica univocamente al ele mento  ademas se conecta con el label -->
+            <!-- placeholder ofrece una pista visual al usuario -->
+            <!-- name define el nombre de la variable que se enciara al servidor cuando se pulse el boton -->
+            <input type="search" name="busqueda" id="search"
+            placeholder="Escribe titulo...">
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+   <section class="tarjeta">
+        <h2>Registrp de usuario</h2>
+        <form action="registro.php" method="post">
+
+            <!-- campo texto -->
+            <label for="name">Nombre de usuario</label>
+            <input type="text" name="nombre" id="name" required></form>
+
+            <!-- Campo email -->
+            <label for="email">Email:</label>
+            <input type="email" name="correo" id="email" placeholder="correo@example.Comparte" required>
+
+            <!-- Campo password -->
+            <label for="pass">Contraseña</label>
+            <input type="password" name="clave" id="pass" required>
+
+            <!-- Campo texto patron -->
+            <label for="id">DNI/NIE</label>
+            <input type="text" name="documento-id" id="id" pattern="([X-Zx-z][0-9]{7}]|[0-9]{8})[A-Z]">
+
+            <!-- Campo numerico -->
+            <label for="age">Edad</label>
+            <input type="number" name="edad" id="age" min="0">
+
+            <button type="submit">Registrar</button>
+
+    </section>
     </main>
     <footer class="pie">
-        <p>&copy; 2025 GameZone</p>
+        <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
     </footer>
-    
 </body>
 </html>

@@ -2,110 +2,146 @@
 * {
     box-sizing: border-box;
 }
-
-/* Altura compleda del documento */
+/* Altura completa del documento*/
 html, body {
     height: 100%;
 }
 
 /*
-Configuracion general:
--Quitamos los margenes por defecto
--elegimos tipogradia y base 
--Definimos color de texto y fondo
-*/
+Configuración general:
+-Quitamos los márgenes por defecto
+-Elegimos tipografía y base
+-Definimos color de texto y fondo*/
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #033;
+    color:#333;
     background: #f0f0f0;
-    display: flex; /*Contenedor Flexible*/
-    flex-direction: column;
-    min-height: 100vh;
+    display: flex;      /* Contenedor flexible */
+    flex-direction: column;     /* Disposición vertical de los 3 elementos */
+    min-height: 100vh;      /* Altura total del viewport */
 }
 
-/*cabecera cemtrada y con espacio de relleno*/
+/* Cabecera con FLEX*/
 .cabecera {
     text-align: center;
-    padding: 1rem; /* 1 rem es igual a 16px*/
+    padding: 1rem;      /* 1 rem = 16 px */
+    display: flex;
+    justify-content:space-between;      /* Separa brand y menú */
+    align-items: center;            /* Centrar verticalmente*/
+    background: #2c3e50;
 }
 
-/*titulo de la cabecera sin margemes extras y color destacado*/
+/* Tamaño del logo */
+.logo {
+    height: 100px;
+    width: auto;
+}
 
-.titulo {
+/*  Menú con FLEX */
+.menu {
+    list-style: none;   /* Eliminamos las viñetas */
+    display: flex;      /* Colocamos en línea los enlaces */
+    gap: 1rem;
     margin: 0;
-    color: #2c2c2c;
+    padding: 0;
 }
+
+/* Estilos básicos de los enlaces del menú */
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efecto hover para los enlaces (pseudoclase) */
+.menu a:hover {
+    color: #e74c3c;
+}
+
+/* Título de la cabecera sin márgenes extra y color destacado */
+/*.titulo {
+    margin: 0;
+    color: #2C3E50;
+}*/
 
 /* Zona principal (main)
-    padding -> espacio interioir o relleno
-    */
+    padding -> espacio interior o relleno
+*/
 #contenido-principal {
     padding: 1rem;
+    flex-grow: 1;           /* Esto empuja el footer hacia abajo */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-/* Clase "tarjeta": usada para agrupar secciones visualmente 
+/* Clase "tarjeta": usada para guarda secciones visualmente
     -color blanco
-    -border sutirl y redondeado en las esquinas
-    -sombras ligera
-    -ancho maximo controlado
+    -border sutil y redondeado
+    -sombra ligera
+    -ancho máxima controlado
 */
 .tarjeta {
     background: #fff;
     border-radius: 12px;
     width: min(900px, 95%);
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
     padding: 1.5rem;
     border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 3);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* Texto Secundario */
+/* Texto secundario */
 .aviso {
-    color: #7f8c8d;
+    color:#7F8C8D;
 }
 
-/* Listas en dos columnas flexibles (FLEX) */
-
+/* Listas en dos columnas flexibles (FLEX)*/
 .listas {
-    display: flex;      /*Convierto al el elemento como contenedor*/
+    display: flex;  /* Convierto al elemento como contenedor flexible */
     flex-direction: row;
     gap: 2rem;
 }
 
-.listas li {
-    margin: 0.5rem 0;
+/* Ajustes visuales de las listas */
+.lista {
+    padding-left: 20px;     /* Espacio para las viñetas o número*/
 }
 
-/*Border y relleno celdas*/
-
-.tabla th, .tabla td {
-    border: 1px solid #ddd;
-    padding: 10px;
+.lista li {
+    margin: 0.5rem 0;       /* Añado espacio vertical entre los elementos de la lista */
 }
 
-.tabla th {
-    background: #2c3e50;
-    color: #fff;
-    text-align: center;
-}
-
-.table td {
-    text-align: center;
-    white-space: nowrap;
-}
-
-/* Estilamos las tablas*/
+/* Estiramos las tablas */
 .tabla {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
 }
 
-/* Estilo del pie de pagina:
+/* Border y rellelno a las celdas */
+.tabla th, .tabla td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.tabla th {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+}
+
+.tabla td {
+    text-align: center;
+    white-space: nowrap;        /* Evita saltos de línea en celdas */
+}
+
+/* Estilo del pie de página:
     - color gris suave
     - tamaño de letra menor
-    -fondo ligeramente gris
+    - fondo ligeramente gris
 */
 
 .pie {
