@@ -189,3 +189,38 @@ body {
     background: #38707e;
     font-size: 14px;
 }
+
+/* ===============================
+    SECCION TIENDA
+    ==============================
+*/
+
+.tarjeta.tienda {
+    width: min(100, 95%);
+}
+
+.lista-cards--flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px ;
+    justify-content: center;
+}
+
+.card {
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+.card-imagen {
+    width: 100%;
+    height: 100px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    object-fit: contain;
+}
