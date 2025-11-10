@@ -25,30 +25,44 @@
     </header>
     <section class="tarjeta">
         <h2>Registrp de usuario</h2>
-        <form action="registro.php" method="post">
+        <form action="registro.php" method="post" class="form-registro">
             <fieldset>
-            <!-- campo texto -->
-            <label for="name">Nombre de usuario</label>
-            <input type="text" name="nombre" id="name" required></form>
-            
-            <!-- Campo email -->
-            <label for="email">Email:</label>
-            <input type="email" name="correo" id="email" placeholder="correo@example.Comparte" required>
-            </fieldset>
-            <fieldset>
+                <!-- campo texto -->
+                <div class="form-row">
+                    <label for="name">Nombre de usuario</label>
+                    <input type="text" name="nombre" id="name" required></form>
+                </div>
+                
             <!-- Campo password -->
-            <label for="pass">Contraseña</label>
-            <input type="password" name="clave" id="pass" required>
+                <div class="form-row">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="clave" id="pass" required>
+                </div>
+                
+            <!-- Campo email -->
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" name="correo" id="email" placeholder="correo@example.Comparte" required>
+                </div>
             
             <!-- Campo texto patron -->
-            <label for="id">DNI/NIE</label>
-            <input type="text" name="documento-id" id="id" pattern="([X-Zx-z][0-9]{7}]|[0-9]{8})[A-Z]">
-            
+                <div class="form-row">
+                    <label for="id">DNI/NIE</label>
+                    <input type="text" name="documento-id" id="id" pattern="([X-Zx-z][0-9]{7}]|[0-9]{8})[A-Z]">
+                    
             <!-- Campo numerico -->
-            <label for="age">Edad</label>
-            <input type="number" name="edad" id="age" min="0">
+                </div>
+                <div class="form-row">
+                    <label for="age">Edad</label>
+                    <input type="number" name="edad" id="age" min="0">
+                </div>
+                <div class="form-row botones">
+                    <button type="submit">Registrar</button>
+                </div>
             </fieldset>
-            <button type="submit">Registrar</button>
+           
+            
+            
             
         
     </section>
