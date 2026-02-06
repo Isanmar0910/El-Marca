@@ -59,7 +59,7 @@ boton.addEventListener("click", () => {
 
 resetBoton.addEventListener("click", () => {
     contador = 0;
-    texto.textContent = mensaje;
+    texto.textContent = `hola`;
 });
 
 const mensaje = [
